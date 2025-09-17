@@ -12,7 +12,10 @@ import {
   Satellite,
   Cpu,
   X,
-  Check
+  Check,
+  RefreshCw,
+  Shield,
+  Waves
 } from 'lucide-react';
 
 const UploadProject = () => {
@@ -31,11 +34,12 @@ const UploadProject = () => {
   const [uploadStep, setUploadStep] = useState(1);
 
   const projectTypes = [
-    { id: 'reforestation', label: 'Reforestation', icon: Leaf },
-    { id: 'solar', label: 'Solar Energy', icon: Camera },
-    { id: 'wind', label: 'Wind Energy', icon: Satellite },
-    { id: 'ocean', label: 'Ocean Cleanup', icon: Cpu },
-  ];
+  { id: 'reforestation', label: 'Mangrove Reforestation', icon: Leaf },
+  { id: 'restoration', label: 'Seagrass Restoration', icon: RefreshCw },
+  { id: 'conservation', label: 'Coastal Conservation', icon: Shield },
+  { id: 'protection', label: 'Salt Marsh Protection', icon: Waves },
+];
+
 
   const dataTypes = [
     { id: 'plantation', label: 'Plantation Counts', icon: Leaf, description: 'Tree count data and species information' },

@@ -17,55 +17,57 @@ const Dashboard = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
-    {
-      id: 1,
-      name: "Amazon Reforestation Initiative",
-      location: "Brazil",
-      co2Absorbed: "15,240",
-      credits: "1,524",
-      status: "verified",
-      progress: 85,
-      image: "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=400",
-      uploadDate: "2024-12-15",
-      verificationDate: "2024-12-20"
-    },
-    {
-      id: 2,
-      name: "Solar Panel Installation",
-      location: "India",
-      co2Absorbed: "8,950",
-      credits: "895",
-      status: "pending",
-      progress: 60,
-      image: "https://images.pexels.com/photos/9875415/pexels-photo-9875415.jpeg?auto=compress&cs=tinysrgb&w=400",
-      uploadDate: "2024-12-18",
-      verificationDate: null
-    },
-    {
-      id: 3,
-      name: "Ocean Cleanup Project",
-      location: "Pacific Ocean",
-      co2Absorbed: "22,100",
-      credits: "2,210",
-      status: "verified",
-      progress: 95,
-      image: "https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=400",
-      uploadDate: "2024-12-10",
-      verificationDate: "2024-12-14"
-    },
-    {
-      id: 4,
-      name: "Wind Farm Development",
-      location: "Denmark",
-      co2Absorbed: "18,750",
-      credits: "1,875",
-      status: "rejected",
-      progress: 40,
-      image: "https://images.pexels.com/photos/414928/pexels-photo-414928.jpeg?auto=compress&cs=tinysrgb&w=400",
-      uploadDate: "2024-12-12",
-      verificationDate: null
-    }
-  ];
+  {
+    id: 1,
+    name: "Avicennia officinalis Reforestation Initiative",
+    location: "Kerala, India",
+    co2Absorbed: "15,240",
+    credits: "1,524",
+    status: "verified",
+    progress: 85,
+    image: "https://www.shutterstock.com/image-photo/pichavaram-mangrove-forests-second-largest-600nw-2187072287.jpg",
+    uploadDate: "2024-12-15",
+    verificationDate: "2024-12-20"
+  },
+  {
+    id: 2,
+    name: "Rhizophora apiculata Mangrove Plantation",
+    location: "Tamil Nadu (Pichavaram), India",
+    co2Absorbed: "12,800",
+    credits: "1,280",
+    status: "pending",
+    progress: 70,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx8KPZHps_ESfAolwRQMzCX0oYG3NqYH0ujA&s",
+    uploadDate: "2024-12-18",
+    verificationDate: null
+  },
+  {
+    id: 3,
+    name: "Sundari Tree Conservation Project",
+    location: "Sundarbans, West Bengal, India",
+    co2Absorbed: "20,500",
+    credits: "2,050",
+    status: "verified",
+    progress: 90,
+    image: "https://natureindiatoursblog.wordpress.com/wp-content/uploads/2019/11/mangrooves.jpg?w=688",
+    uploadDate: "2024-12-10",
+    verificationDate: "2024-12-14"
+  },
+  {
+    id: 4,
+    name: "Seagrass Restoration Initiative",
+    location: "Andaman & Nicobar Islands, India",
+    co2Absorbed: "9,600",
+    credits: "960",
+    status: "pending",
+    progress: 65,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBinQuyxJIUmk-O_UAE8h_D9zTau3ViCNvIw&s",
+    uploadDate: "2024-12-22",
+    verificationDate: null
+  }
+];
+
+
 
   const stats = [
     { title: "Total CO₂ Offset", value: "64,040 tons", icon: TrendingUp, color: "from-green-400 to-green-600" },
