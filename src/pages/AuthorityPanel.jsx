@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
-import { 
-  Shield, 
-  CheckCircle, 
-  XCircle, 
+import {
+  Shield,
+  CheckCircle,
+  XCircle,
   Clock,
   MapPin,
   Calendar,
@@ -24,9 +24,9 @@ const AuthorityPanel = () => {
   const pendingSubmissions = [
     {
       id: 1,
-      projectName: "Coastal Mangrove Restoration",
-      submitter: "Green Coast Initiative",
-      location: "Philippines",
+      projectName: "Coastal Mangrove Restoration - Kerala",
+      submitter: "BlueCarbon India Foundation",
+      location: "Kerala, India",
       type: "reforestation",
       submissionDate: "2024-12-20",
       expectedCO2: "12,500",
@@ -34,44 +34,44 @@ const AuthorityPanel = () => {
       status: "pending",
       priority: "high",
       files: ["satellite_images.jpg", "plantation_data.csv", "impact_report.pdf"],
-      description: "Large-scale mangrove restoration project aimed at protecting coastal communities and marine biodiversity while sequestering significant amounts of carbon."
+      description: "Large-scale Avicennia officinalis mangrove restoration aimed at protecting coastal communities, enhancing biodiversity, and sequestering carbon."
     },
     {
       id: 2,
-      projectName: "Community Solar Grid",
-      submitter: "Rural Energy Solutions",
-      location: "Kenya",
-      type: "solar",
+      projectName: "Seagrass Meadow Restoration - Andaman",
+      submitter: "Island Marine Conservation Group",
+      location: "Andaman & Nicobar Islands, India",
+      type: "restoration",
       submissionDate: "2024-12-19",
-      expectedCO2: "8,750",
-      area: "200",
+      expectedCO2: "8,000",
+      area: "300",
       status: "pending",
       priority: "medium",
-      files: ["installation_photos.jpg", "energy_output.csv", "community_report.pdf"],
-      description: "Solar panel installation providing clean energy access to rural communities while reducing reliance on fossil fuel generators."
+      files: ["underwater_photos.jpg", "seagrass_data.csv", "impact_report.pdf"],
+      description: "Restoration of seagrass meadows to capture carbon, support marine biodiversity, and improve local fisheries."
     },
     {
       id: 3,
-      projectName: "Organic Waste Recycling",
-      submitter: "EcoWaste Management",
-      location: "Bangladesh",
-      type: "waste",
+      projectName: "Salt Marsh Protection - Chilika Lake",
+      submitter: "Odisha Coastal Alliance",
+      location: "Odisha, India",
+      type: "conservation",
       submissionDate: "2024-12-18",
-      expectedCO2: "15,200",
-      area: "75",
+      expectedCO2: "5,000",
+      area: "150",
       status: "pending",
       priority: "high",
-      files: ["facility_images.jpg", "waste_data.csv", "emission_calculations.pdf"],
-      description: "Innovative organic waste processing facility converting municipal waste into biogas and compost, reducing methane emissions."
+      files: ["marsh_images.jpg", "soil_data.csv", "impact_report.pdf"],
+      description: "Protection of salt marsh ecosystems that reduce coastal erosion, buffer floods, and store blue carbon in soils."
     }
   ];
 
   const recentDecisions = [
     {
       id: 4,
-      projectName: "Amazon Forest Protection",
-      submitter: "Rainforest Alliance",
-      location: "Brazil",
+      projectName: "Sundari Mangrove Conservation - Sundarbans",
+      submitter: "Sundarbans Eco Trust",
+      location: "West Bengal, India",
       status: "approved",
       decisionDate: "2024-12-15",
       creditsIssued: "25,000",
@@ -79,26 +79,27 @@ const AuthorityPanel = () => {
     },
     {
       id: 5,
-      projectName: "Wind Farm Expansion",
-      submitter: "Nordic Green Energy",
-      location: "Norway",
+      projectName: "Pichavaram Mangrove Reforestation",
+      submitter: "Tamil Nadu Blue Carbon Initiative",
+      location: "Tamil Nadu, India",
       status: "approved",
       decisionDate: "2024-12-14",
       creditsIssued: "18,500",
-      reviewer: "Prof. Erik Hansen"
+      reviewer: "Prof. R. Kumar"
     },
     {
       id: 6,
-      projectName: "Desert Solar Installation",
-      submitter: "Desert Power Corp",
-      location: "Morocco",
+      projectName: "Gulf of Mannar Seagrass Restoration",
+      submitter: "BlueSeas Foundation",
+      location: "Tamil Nadu, India",
       status: "rejected",
       decisionDate: "2024-12-13",
       creditsIssued: "0",
-      reviewer: "Dr. Ahmed Al-Rashid",
-      rejectionReason: "Insufficient environmental impact documentation"
+      reviewer: "Dr. Ananya Sen",
+      rejectionReason: "Incomplete baseline carbon assessment"
     }
   ];
+
 
   const stats = [
     { title: "Pending Reviews", value: "23", icon: Clock, color: "from-yellow-400 to-yellow-600" },
@@ -142,7 +143,7 @@ const AuthorityPanel = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -192,11 +193,10 @@ const AuthorityPanel = () => {
               <button
                 key={tab.id}
                 onClick={() => setSelectedTab(tab.id)}
-                className={`flex-1 flex items-center justify-center py-2 px-4 rounded-md font-medium transition-colors ${
-                  selectedTab === tab.id
+                className={`flex-1 flex items-center justify-center py-2 px-4 rounded-md font-medium transition-colors ${selectedTab === tab.id
                     ? 'bg-white/20 text-white'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
+                  }`}
               >
                 {tab.label} ({tab.count})
               </button>

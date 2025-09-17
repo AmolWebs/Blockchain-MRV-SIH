@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  MapPin, 
-  Calendar, 
+import {
+  TrendingUp,
+  TrendingDown,
+  MapPin,
+  Calendar,
   Leaf,
   DollarSign,
   ShoppingCart,
@@ -22,109 +22,111 @@ const Marketplace = () => {
   const [sortBy, setSortBy] = useState('price');
 
   const carbonCredits = [
-    {
-      id: 1,
-      project: "Amazon Rainforest Conservation",
-      location: "Brazil",
-      type: "reforestation",
-      price: 45,
-      co2Amount: 1000,
-      available: 500,
-      verification: "Gold Standard",
-      vintage: "2024",
-      seller: "Green Earth Foundation",
-      rating: 4.9,
-      image: "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=400",
-      trend: "up",
-      trendPercent: 12,
-      description: "Large-scale rainforest conservation project protecting biodiversity and reducing deforestation in the Amazon basin."
-    },
-    {
-      id: 2,
-      project: "Solar Energy Initiative",
-      location: "India",
-      type: "solar",
-      price: 38,
-      co2Amount: 750,
-      available: 300,
-      verification: "VCS",
-      vintage: "2024",
-      seller: "Solar Solutions Corp",
-      rating: 4.7,
-      image: "https://images.pexels.com/photos/9875415/pexels-photo-9875415.jpeg?auto=compress&cs=tinysrgb&w=400",
-      trend: "up",
-      trendPercent: 8,
-      description: "Community solar installation providing clean energy to rural villages while reducing carbon emissions."
-    },
-    {
-      id: 3,
-      project: "Ocean Cleanup Technology",
-      location: "Pacific Ocean",
-      type: "ocean",
-      price: 52,
-      co2Amount: 1200,
-      available: 200,
-      verification: "CDM",
-      vintage: "2023",
-      seller: "Ocean Guardians",
-      rating: 4.8,
-      image: "https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=400",
-      trend: "down",
-      trendPercent: 5,
-      description: "Advanced ocean cleanup systems removing plastic waste and protecting marine ecosystems."
-    },
-    {
-      id: 4,
-      project: "Wind Farm Development",
-      location: "Denmark",
-      type: "wind",
-      price: 41,
-      co2Amount: 900,
-      available: 800,
-      verification: "Gold Standard",
-      vintage: "2024",
-      seller: "Nordic Wind Energy",
-      rating: 4.6,
-      image: "https://images.pexels.com/photos/414928/pexels-photo-414928.jpeg?auto=compress&cs=tinysrgb&w=400",
-      trend: "up",
-      trendPercent: 15,
-      description: "Offshore wind farm providing renewable energy and contributing to Denmark's carbon neutrality goals."
-    },
-    {
-      id: 5,
-      project: "Mangrove Restoration",
-      location: "Indonesia",
-      type: "reforestation",
-      price: 48,
-      co2Amount: 850,
-      available: 400,
-      verification: "VCS",
-      vintage: "2024",
-      seller: "Coastal Conservation Alliance",
-      rating: 4.9,
-      image: "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=400",
-      trend: "up",
-      trendPercent: 10,
-      description: "Mangrove ecosystem restoration protecting coastlines and supporting local fishing communities."
-    },
-    {
-      id: 6,
-      project: "Geothermal Energy Plant",
-      location: "Iceland",
-      type: "geothermal",
-      price: 36,
-      co2Amount: 1100,
-      available: 600,
-      verification: "Gold Standard",
-      vintage: "2023",
-      seller: "Geothermal Innovations",
-      rating: 4.5,
-      image: "https://images.pexels.com/photos/9875415/pexels-photo-9875415.jpeg?auto=compress&cs=tinysrgb&w=400",
-      trend: "up",
-      trendPercent: 7,
-      description: "Sustainable geothermal energy production harnessing Iceland's natural thermal resources."
-    }
-  ];
+  {
+    id: 1,
+    project: "Mangrove Carbon Credits - Sundarbans",
+    location: "West Bengal, India",
+    type: "reforestation",
+    price: 14,
+    co2Amount: 12000,
+    available: 6000,
+    verification: "VCS",
+    vintage: "2024",
+    seller: "Sundarbans Eco Trust",
+    rating: 4.9,
+    image: "https://www.shutterstock.com/image-photo/pichavaram-mangrove-forests-second-largest-600nw-2187072287.jpg",
+    trend: "up",
+    trendPercent: 11,
+    description: "Certified mangrove carbon credits from Sundarbans, supporting coastal protection, biodiversity, and carbon sequestration."
+  },
+  {
+    id: 2,
+    project: "Seagrass Restoration Credits - Gulf of Mannar",
+    location: "Tamil Nadu, India",
+    type: "restoration",
+    price: 18,
+    co2Amount: 8000,
+    available: 4000,
+    verification: "Gold Standard",
+    vintage: "2024",
+    seller: "BlueSeas Foundation",
+    rating: 4.8,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx8KPZHps_ESfAolwRQMzCX0oYG3NqYH0ujA&s",
+    trend: "up",
+    trendPercent: 9,
+    description: "Community-led seagrass restoration generating blue carbon credits while improving marine biodiversity and fisheries."
+  },
+  {
+    id: 3,
+    project: "Salt Marsh Protection Units - Chilika Lake",
+    location: "Odisha, India",
+    type: "conservation",
+    price: 10,
+    co2Amount: 5000,
+    available: 2500,
+    verification: "CDM",
+    vintage: "2023",
+    seller: "Odisha Coastal Alliance",
+    rating: 4.7,
+    image: "https://natureindiatoursblog.wordpress.com/wp-content/uploads/2019/11/mangrooves.jpg?w=688",
+    trend: "down",
+    trendPercent: 4,
+    description: "Salt marsh ecosystem conservation credits from Chilika Lake, enhancing carbon storage and coastal flood resilience."
+  },
+  {
+    id: 4,
+    project: "Mangrove Reforestation Pre-Sale - Pichavaram",
+    location: "Tamil Nadu, India",
+    type: "reforestation",
+    price: 12,
+    co2Amount: 15000,
+    available: 7500,
+    verification: "Pending VCS",
+    vintage: "2025",
+    seller: "Tamil Nadu Blue Carbon Initiative",
+    rating: 4.6,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBinQuyxJIUmk-O_UAE8h_D9zTau3ViCNvIw&s",
+    trend: "up",
+    trendPercent: 13,
+    description: "Forward credits from upcoming mangrove reforestation in Pichavaram. Early buyers benefit from discounted rates."
+  },
+  {
+    id: 1,
+    project: "Mangrove Carbon Credits - Sundarbans",
+    location: "West Bengal, India",
+    type: "reforestation",
+    price: 14,
+    co2Amount: 12000,
+    available: 6000,
+    verification: "VCS",
+    vintage: "2024",
+    seller: "Sundarbans Eco Trust",
+    rating: 4.9,
+    image: "https://www.shutterstock.com/image-photo/pichavaram-mangrove-forests-second-largest-600nw-2187072287.jpg",
+    trend: "up",
+    trendPercent: 11,
+    description: "Certified mangrove carbon credits from Sundarbans, supporting coastal protection, biodiversity, and carbon sequestration."
+  },
+  {
+    id: 2,
+    project: "Seagrass Restoration Credits - Gulf of Mannar",
+    location: "Tamil Nadu, India",
+    type: "restoration",
+    price: 18,
+    co2Amount: 8000,
+    available: 4000,
+    verification: "Gold Standard",
+    vintage: "2024",
+    seller: "BlueSeas Foundation",
+    rating: 4.8,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx8KPZHps_ESfAolwRQMzCX0oYG3NqYH0ujA&s",
+    trend: "up",
+    trendPercent: 9,
+    description: "Community-led seagrass restoration generating blue carbon credits while improving marine biodiversity and fisheries."
+  }
+];
+
+
 
   const marketStats = [
     { label: "Total Volume", value: "2.4M", unit: "tons CO₂", trend: "up", change: "+15%" },
@@ -134,16 +136,15 @@ const Marketplace = () => {
   ];
 
   const projectTypes = [
-    { id: 'all', label: 'All Projects', count: carbonCredits.length },
-    { id: 'reforestation', label: 'Reforestation', count: 2 },
-    { id: 'solar', label: 'Solar Energy', count: 1 },
-    { id: 'wind', label: 'Wind Energy', count: 1 },
-    { id: 'ocean', label: 'Ocean Cleanup', count: 1 },
-    { id: 'geothermal', label: 'Geothermal', count: 1 }
-  ];
+  { id: 'all', label: 'All Projects', count: carbonCredits.length },
+  { id: 'reforestation', label: 'Reforestation', count: 2 },
+  { id: 'restoration', label: 'Restoration', count: 1 },
+  { id: 'conservation', label: 'Conservation', count: 1 }
+];
 
-  const filteredCredits = filterType === 'all' 
-    ? carbonCredits 
+
+  const filteredCredits = filterType === 'all'
+    ? carbonCredits
     : carbonCredits.filter(credit => credit.type === filterType);
 
   const sortedCredits = [...filteredCredits].sort((a, b) => {
@@ -162,7 +163,7 @@ const Marketplace = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -187,9 +188,8 @@ const Marketplace = () => {
             >
               <div className="flex items-center justify-between mb-2">
                 <p className="text-gray-300 text-sm">{stat.label}</p>
-                <div className={`flex items-center text-xs ${
-                  stat.trend === 'up' ? 'text-green-400' : 'text-red-400'
-                }`}>
+                <div className={`flex items-center text-xs ${stat.trend === 'up' ? 'text-green-400' : 'text-red-400'
+                  }`}>
                   {stat.trend === 'up' ? (
                     <TrendingUp className="h-3 w-3 mr-1" />
                   ) : (
@@ -264,8 +264,8 @@ const Marketplace = () => {
               onClick={() => setSelectedCredit(credit)}
             >
               <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={credit.image} 
+                <img
+                  src={credit.image}
                   alt={credit.project}
                   className="w-full h-full object-cover"
                 />
@@ -276,9 +276,8 @@ const Marketplace = () => {
                   </span>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <div className={`flex items-center text-xs ${
-                    credit.trend === 'up' ? 'text-green-400' : 'text-red-400'
-                  } bg-black/50 px-2 py-1 rounded-full`}>
+                  <div className={`flex items-center text-xs ${credit.trend === 'up' ? 'text-green-400' : 'text-red-400'
+                    } bg-black/50 px-2 py-1 rounded-full`}>
                     {credit.trend === 'up' ? (
                       <TrendingUp className="h-3 w-3 mr-1" />
                     ) : (
@@ -361,12 +360,12 @@ const Marketplace = () => {
                 </button>
               </div>
 
-              <img 
-                src={selectedCredit.image} 
+              <img
+                src={selectedCredit.image}
                 alt={selectedCredit.project}
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Project Details</h3>
@@ -414,9 +413,8 @@ const Marketplace = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-300">Market trend:</span>
-                      <div className={`flex items-center ${
-                        selectedCredit.trend === 'up' ? 'text-green-400' : 'text-red-400'
-                      }`}>
+                      <div className={`flex items-center ${selectedCredit.trend === 'up' ? 'text-green-400' : 'text-red-400'
+                        }`}>
                         {selectedCredit.trend === 'up' ? (
                           <TrendingUp className="h-4 w-4 mr-1" />
                         ) : (

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
-import { 
-  Wallet, 
-  TrendingUp, 
-  TrendingDown, 
+import {
+  Wallet,
+  TrendingUp,
+  TrendingDown,
   Download,
   ArrowUpRight,
   ArrowDownRight,
@@ -34,48 +34,49 @@ const UserBalance = () => {
       id: 1,
       type: 'earned',
       amount: 1524,
-      project: 'Amazon Reforestation Initiative',
+      project: 'Mangrove Reforestation - Sundarbans',
       date: '2024-12-20',
       value: 68580,
       co2: 1524
     },
     {
       id: 2,
-      type: 'traded',
-      amount: -500,
-      project: 'Solar Panel Installation',
+      type: 'earned',
+      amount: 1100,
+      project: 'Sundari Mangrove Conservation - Sundarbans',
       date: '2024-12-18',
-      value: -22500,
-      co2: -500
+      value: 49500,
+      co2: 1100
     },
     {
       id: 3,
       type: 'earned',
-      amount: 2210,
-      project: 'Ocean Cleanup Project',
+      amount: 800,
+      project: 'Seagrass Restoration - Gulf of Mannar',
       date: '2024-12-14',
-      value: 119340,
-      co2: 2210
+      value: 36000,
+      co2: 800
     },
     {
       id: 4,
       type: 'earned',
-      amount: 895,
-      project: 'Community Wind Farm',
+      amount: 500,
+      project: 'Salt Marsh Protection - Chilika Lake',
       date: '2024-12-10',
-      value: 36685,
-      co2: 895
+      value: 22500,
+      co2: 500
     },
     {
       id: 5,
       type: 'traded',
       amount: -300,
-      project: 'Marketplace Trade',
+      project: 'Marketplace Blue Carbon Sale',
       date: '2024-12-08',
-      value: -13200,
+      value: -13500,
       co2: -300
     }
   ];
+
 
   const portfolioBreakdown = [
     { type: 'Reforestation', amount: 6250, percentage: 40, color: 'from-green-400 to-green-600' },
@@ -139,7 +140,7 @@ const UserBalance = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -217,7 +218,7 @@ const UserBalance = () => {
                 <h2 className="text-xl font-bold text-white">Portfolio Breakdown</h2>
                 <PieChart className="h-5 w-5 text-gray-400" />
               </div>
-              
+
               <div className="space-y-4">
                 {portfolioBreakdown.map((item, index) => (
                   <div key={index} className="flex items-center justify-between">
@@ -255,9 +256,8 @@ const UserBalance = () => {
                   return (
                     <div
                       key={index}
-                      className={`flex items-center space-x-3 p-3 rounded-lg ${
-                        achievement.unlocked ? 'bg-green-500/20' : 'bg-gray-500/20'
-                      }`}
+                      className={`flex items-center space-x-3 p-3 rounded-lg ${achievement.unlocked ? 'bg-green-500/20' : 'bg-gray-500/20'
+                        }`}
                     >
                       <Icon className={`h-5 w-5 ${achievement.unlocked ? 'text-green-400' : 'text-gray-400'}`} />
                       <div>
@@ -288,11 +288,10 @@ const UserBalance = () => {
                     <button
                       key={timeframe}
                       onClick={() => setSelectedTimeframe(timeframe)}
-                      className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                        selectedTimeframe === timeframe
+                      className={`px-3 py-1 rounded text-sm font-medium transition-colors ${selectedTimeframe === timeframe
                           ? 'bg-green-500 text-white'
                           : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                      }`}
+                        }`}
                     >
                       {timeframe.charAt(0).toUpperCase() + timeframe.slice(1)}
                     </button>
@@ -310,9 +309,8 @@ const UserBalance = () => {
                     className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                        transaction.type === 'earned' ? 'bg-green-500/20' : 'bg-red-500/20'
-                      }`}>
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${transaction.type === 'earned' ? 'bg-green-500/20' : 'bg-red-500/20'
+                        }`}>
                         {transaction.type === 'earned' ? (
                           <ArrowDownRight className="h-5 w-5 text-green-400" />
                         ) : (
@@ -328,9 +326,8 @@ const UserBalance = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className={`font-semibold ${
-                        transaction.type === 'earned' ? 'text-green-400' : 'text-red-400'
-                      }`}>
+                      <p className={`font-semibold ${transaction.type === 'earned' ? 'text-green-400' : 'text-red-400'
+                        }`}>
                         {transaction.amount > 0 ? '+' : ''}{transaction.amount.toLocaleString()} credits
                       </p>
                       <p className="text-gray-400 text-sm">
@@ -357,7 +354,7 @@ const UserBalance = () => {
               const maxValue = Math.max(...monthlyData.map(d => d.earned + d.traded));
               const earnedHeight = (data.earned / maxValue) * 100;
               const tradedHeight = (data.traded / maxValue) * 100;
-              
+
               return (
                 <div key={index} className="flex-1 flex flex-col items-center">
                   <div className="w-full flex flex-col items-center space-y-1 mb-2">
