@@ -36,7 +36,7 @@ const Navbar = () => {
               >
                 <Leaf className="h-8 w-8 text-green-400" />
               </motion.div>
-              <span className="text-xl font-bold text-white">CarbonFlow</span>
+              <span className="text-xl font-bold text-white">BlueChain</span>
             </Link>
           </div>
 

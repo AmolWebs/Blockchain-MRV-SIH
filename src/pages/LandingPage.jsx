@@ -55,23 +55,15 @@ const LandingPage = () => {
         />
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
-          >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="inline-block mb-6"
-            >
-              <Leaf className="h-16 w-16 text-green-400 mx-auto" />
-            </motion.div>
+          
             
-            <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
+              
+            
+             
+            
+           <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                CarbonFlow
+                BlueChain
               </span>
             </h1>
             
@@ -79,7 +71,6 @@ const LandingPage = () => {
               The next-generation platform for managing, trading, and verifying carbon credits. 
               Empowering communities and organizations to create meaningful environmental impact.
             </p>
-          </motion.div>
 
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -204,7 +195,7 @@ const LandingPage = () => {
             Ready to Make an Impact?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of organizations already using CarbonFlow to create positive environmental change
+            Join thousands of organizations already using BlueChain to create positive environmental change
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
