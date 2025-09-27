@@ -130,9 +130,9 @@ const Marketplace = () => {
 
   const marketStats = [
     { label: "Total Volume", value: "2.4M", unit: "tons CO₂", trend: "up", change: "+15%" },
-    { label: "Avg Price", value: "$43", unit: "per ton", trend: "up", change: "+8%" },
+    { label: "Avg Price", value: "Rs.43", unit: "per ton", trend: "up", change: "+8%" },
     { label: "Active Listings", value: "1,247", unit: "credits", trend: "up", change: "+12%" },
-    { label: "Trading Volume", value: "$108M", unit: "today", trend: "down", change: "-3%" }
+    { label: "Trading Volume", value: "Rs.108M", unit: "today", trend: "down", change: "-3%" }
   ];
 
   const projectTypes = [
@@ -305,7 +305,7 @@ const Marketplace = () => {
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
                     <p className="text-gray-400 text-xs">Price per ton</p>
-                    <p className="text-xl font-bold text-green-400">${credit.price}</p>
+                    <p className="text-xl font-bold text-green-400"> <span>&#8377;</span>  {credit.price}</p>
                   </div>
                   <div>
                     <p className="text-gray-400 text-xs">Available</p>
@@ -401,7 +401,7 @@ const Marketplace = () => {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span className="text-gray-300">Price per ton:</span>
-                      <span className="text-2xl font-bold text-green-400">${selectedCredit.price}</span>
+                      <span className="text-2xl font-bold text-green-400"> <span>&#8377;</span>  {selectedCredit.price}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-300">Available:</span>

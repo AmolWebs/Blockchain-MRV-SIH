@@ -113,7 +113,7 @@ const UserBalance = () => {
     },
     {
       title: "Portfolio Value",
-      value: `$${(userStats.creditValue / 1000).toFixed(1)}K`,
+      value: `Rs.${(userStats.creditValue / 1000).toFixed(1)}K`,
       icon: DollarSign,
       color: "from-blue-400 to-blue-600",
       change: "+12.5%",
@@ -331,7 +331,7 @@ const UserBalance = () => {
                         {transaction.amount > 0 ? '+' : ''}{transaction.amount.toLocaleString()} credits
                       </p>
                       <p className="text-gray-400 text-sm">
-                        ${Math.abs(transaction.value).toLocaleString()}
+                        <span>&#8377;</span>  {Math.abs(transaction.value).toLocaleString()}
                       </p>
                     </div>
                   </motion.div>
