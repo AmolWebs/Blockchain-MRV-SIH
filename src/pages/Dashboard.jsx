@@ -73,7 +73,7 @@ const Dashboard = () => {
     { title: "Total CO₂ Offset", value: "64,040 tons", icon: TrendingUp, color: "from-green-400 to-green-600" },
     { title: "Carbon Credits", value: "6,504", icon: Leaf, color: "from-blue-400 to-blue-600" },
     { title: "Active Projects", value: "4", icon: Users, color: "from-purple-400 to-purple-600" },
-    { title: "Credits Value", value: "$325K", icon: DollarSign, color: "from-yellow-400 to-yellow-600" }
+    { title: "Credits Value", value: "Rs.325K", icon: DollarSign, color: "from-yellow-400 to-yellow-600" }
   ];
 
   const getStatusIcon = (status) => {
