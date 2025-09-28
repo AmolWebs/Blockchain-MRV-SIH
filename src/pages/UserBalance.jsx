@@ -79,10 +79,9 @@ const UserBalance = () => {
 
 
   const portfolioBreakdown = [
-    { type: 'Reforestation', amount: 6250, percentage: 40, color: 'from-green-400 to-green-600' },
+    { type: 'Seagrass Meadows', amount: 6250, percentage: 40, color: 'from-green-400 to-green-600' },
     { type: 'Renewable Energy', amount: 4725, percentage: 30, color: 'from-blue-400 to-blue-600' },
-    { type: 'Ocean Cleanup', amount: 2363, percentage: 15, color: 'from-teal-400 to-teal-600' },
-    { type: 'Waste Management', amount: 1575, percentage: 10, color: 'from-purple-400 to-purple-600' },
+    { type: 'Salt Marshes', amount: 2363, percentage: 15, color: 'from-teal-400 to-teal-600' },
     { type: 'Other', amount: 788, percentage: 5, color: 'from-gray-400 to-gray-600' }
   ];
 
