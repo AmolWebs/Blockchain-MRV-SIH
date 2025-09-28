@@ -80,7 +80,7 @@ const UserBalance = () => {
 
   const portfolioBreakdown = [
     { type: 'Seagrass Meadows', amount: 6250, percentage: 40, color: 'from-green-400 to-green-600' },
-    { type: 'Renewable Energy', amount: 4725, percentage: 30, color: 'from-blue-400 to-blue-600' },
+    { type: 'Mangroves', amount: 4725, percentage: 30, color: 'from-blue-400 to-blue-600' },
     { type: 'Salt Marshes', amount: 2363, percentage: 15, color: 'from-teal-400 to-teal-600' },
     { type: 'Other', amount: 788, percentage: 5, color: 'from-gray-400 to-gray-600' }
   ];
